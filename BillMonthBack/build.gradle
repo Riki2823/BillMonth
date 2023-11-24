@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'io.spring.dependency-management' version("1.1.4")
+    id 'org.springframework.boot' version("3.1.0")
 }
 
 group = 'villanueva.ricardo'
@@ -10,6 +12,9 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.1.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
